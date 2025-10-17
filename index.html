@@ -9,12 +9,16 @@
     />
     <title>Wohnungssuche Salo und Jonas</title>
     <style>
+      ::-webkit-scrollbar {
+        width: 0px;
+      }
       body {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
           Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
           "Segoe UI Symbol";
         font-size: 24px;
+        scrollbar-width: none;
       }
       h3 {
         margin: 1em 0 0.5em 0;
@@ -67,6 +71,7 @@
         font-size: 36px;
         line-height: 1.6em;
         text-align: justify;
+        padding: 2em;
       }
       .facts {
         display: flex;
@@ -97,23 +102,37 @@
       .odd a:hover {
         color: #ffa500;
       }
-      /* @media (min-width: 600px) {
+      @media (max-width: 600px) {
         .container {
           font-size: 18px;
         }
         .headerImage {
-          background-image: url("media/mobile.png");
-          padding: 0 0.5em;
+          background-image: url("media/desktop.png");
         }
         .info {
-          grid-template-columns: auto;
-          padding: 6em 4em;
+          height: 100vh;
+          display: grid;
+          grid-template-columns: auto auto;
+        }
+        .info section {
+          background-color: #ffeecc;
+          color: #506073;
+          padding: 2em;
+        }
+        .info .scrollArrow {
+          display: none !important;
+        }
+        .text {
+          font-size: 24px;
+        }
+        .scrollArrow {
+          bottom: 2em;
         }
         .facts {
           display: grid;
           grid-template-columns: auto auto;
         }
-      } */
+      }
       @keyframes bounce {
         0%,
         20%,
@@ -142,7 +161,7 @@
         >
       </section>
       <div class="info">
-        <section id="story" class="even text" style="padding: 2em">
+        <section id="story" class="even text">
           <div class="story">
             <h3>Story</h3>
             <div>
@@ -189,7 +208,7 @@
               <h3>Wir suchen:</h3>
               <div><span class="emoji">🚪</span> ab 3 Zimmer</div>
               <div><span class="emoji">🏠</span> ab ca. 80m²</div>
-              <div><span class="emoji">💰</span> bis 1400€ Warmmiete</div>
+              <div><span class="emoji">💸</span> bis 1400€ Warmmiete</div>
               <div>
                 <span class="emoji">📍</span> in Karlsruhe Durlach oder Umgebung
               </div>
@@ -205,7 +224,7 @@
                 Arbeitsvertrag
               </div>
               <div>
-                <span class="emoji">💸</span> schreibt uns gerne für
+                <span class="emoji">💰</span> schreibt uns gerne für
                 Gehaltsnachweise
               </div>
               <div><span class="emoji">🚭</span> beide Nichtraucher</div>
