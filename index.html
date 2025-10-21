@@ -76,6 +76,15 @@
       .facts {
         display: flex;
         flex-direction: column;
+        text-align: left;
+      }
+      .facts > div > div {
+        display: grid;
+        grid-template-columns: 2em 1fr;
+        gap: 1em;
+        align-items: start;
+        line-height: 1.2;
+        padding-bottom: 0.5em;
       }
       .signature {
         font-family: "Brush Script MT", "Lucida Handwriting", "Comic Sans MS",
@@ -92,6 +101,7 @@
         color: #3366cc;
         text-decoration: underline;
         transition: color 0.2s;
+        display: contents;
       }
       a:hover {
         color: #238c7e;
@@ -102,7 +112,7 @@
       .odd a:hover {
         color: #ffa500;
       }
-      @media (max-width: 600px) {
+      @media (min-width: 1200px) {
         .container {
           font-size: 18px;
         }
@@ -117,13 +127,13 @@
         .info section {
           background-color: #ffeecc;
           color: #506073;
-          padding: 2em;
+          padding: 0 2em;
         }
         .info .scrollArrow {
           display: none !important;
         }
         .text {
-          font-size: 24px;
+          font-size: 20px;
         }
         .scrollArrow {
           bottom: 2em;
@@ -131,6 +141,13 @@
         .facts {
           display: grid;
           grid-template-columns: auto auto;
+          gap: 2em;
+        }
+        .odd a {
+          color: #3366cc;
+        }
+        .odd a:hover {
+          color: #238c7e;
         }
       }
       @keyframes bounce {
@@ -211,7 +228,8 @@
               <div><span class="emoji">🏠</span> ab ca. 80m²</div>
               <div><span class="emoji">💸</span> bis 1400€ Warmmiete</div>
               <div>
-                <span class="emoji">📍</span> in Karlsruhe Durlach oder Umgebung
+                <span class="emoji">📍</span> in Karlsruhe Durlach und Umgebung
+                oder in Hauptbahnhofsnähe
               </div>
               <div>
                 <span class="emoji">📆</span> ab sofort am liebsten bis Dezember
@@ -225,8 +243,8 @@
                 Arbeitsvertrag
               </div>
               <div>
-                <span class="emoji">💰</span> schreibt uns gerne für
-                Gehaltsnachweise
+                <span class="emoji">💰</span> gutes Haushaltseinkommen (schreibt
+                uns gerne für Gehaltsnachweise)
               </div>
               <div><span class="emoji">🚭</span> beide Nichtraucher</div>
               <div><span class="emoji">🐶</span> keine Haustiere</div>
@@ -242,8 +260,14 @@
                   >wohnung@happiness-adventure.de</a
                 >
               </div>
-              <div><span class="emoji">☎</span> 0157 50105649 (Salo)</div>
-              <div><span class="emoji">☎</span> 0157 85958681 (Jonas)</div>
+              <div>
+                <span class="emoji">☎</span
+                ><a href="tel:015750105649">0157 50105649</a>&nbsp;(Salo)
+              </div>
+              <div>
+                <span class="emoji">☎</span
+                ><a href="tel:015785958681">0157 85958681</a>&nbsp;(Jonas)
+              </div>
             </div>
           </div>
         </section>
